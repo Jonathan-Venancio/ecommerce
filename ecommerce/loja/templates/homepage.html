@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+<main class="principal">
+
+    <section class="banner-individual">
+        <a href="{% url 'loja' %}">
+          <img src="{% static 'images/gif1.gif' %}" alt="Banner Gif Desktop"/>
+          <img src="{% static 'images/gif2.gif' %}" alt="Banner Gif Mobile"/>
+        </a>
+      </section>
+
+    <section class="banner-grid">
+    {% for banner in banners %}
+      <a href="{% url 'loja' %}{{ banner.link_destino }}">
+        <img src="{{ banner.imagem.url }}" alt="{{ banner.link_destino }}"/>
+      </a>
+    {% endfor %}
+    </section>
+
+  </main>
+
+{% endblock %}

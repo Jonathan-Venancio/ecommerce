@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<main class="principal">
+    <section class="conta">
+    
+      <div class="conta__container">
+        <div class="checkout__titulos">
+          <p class="checkout__titulo">Adicione um novo endereço</p>
+        </div>
+        
+        {% if erro %}
+            <p style="color: red;">{{ erro }}</p>
+        {% endif %}
+
+        <form class="conta__form" action="{% url 'adicionar_endereco' %}" method="post">
+            {% csrf_token %}
+
+          <div class="conta__item">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" placeholder="Cidade*" value="{{ dados.cidade|default_if_none:'' }}"/>
+          </div>
+
+          <div class="conta__item">
+            <label for="estado">Estado</label>
+            <input type="text" name="estado" placeholder="Estado*" value="{{ dados.estado|default_if_none:'' }}"/>
+          </div>
+
+          <div class="conta__item">
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" placeholder="Rua*" value="{{ dados.rua|default_if_none:'' }}"/>
+          </div>
+
+          <div class="conta__item">
+            <label for="numero">Número</label>
+            <input type="number" name="numero" placeholder="Número*" value="{{ dados.numero|default_if_none:'' }}">
+          </div>
+
+          <div class="conta__item">
+            <label for="complemento">Complemento</label>
+            <input type="text" name="complemento" placeholder="Complemento" value="{{ dados.complemento|default_if_none:'' }}">
+          </div>
+
+          <div class="conta__item">
+            <label for="cep">CEP</label>
+            <input type="number" name="cep" placeholder="CEP*" value="{{ dados.cep|default_if_none:'' }}">
+          </div>
+
+          <button class="subtotal__botao" type="submit">
+            Adicionar Endereço
+          </button>
+        
+        </form>
+        <a href="{% url 'checkout' %}">Retornar a compra</a>
+      </div>
+
+    </section>
+</main>
+
+{% endblock %}

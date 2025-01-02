@@ -1,0 +1,176 @@
+{% load static %}
+
+<header class="cabecalho">
+
+    <!--icone menu mobile-->
+    <div class="cabecalho__menu">
+      <img class="cabecalho__menu-icone" src="{% static 'images/menu.svg'%}" alt="Ícone Menu"/>
+      <p class="cabecalho__menu-x">X</p>
+    </div>
+
+    <!--Logo do site-->
+    <div class="cabecalho__container">
+      <a href="{% url 'homepage' %}">
+        <img src="{% static 'images/logo.png'%}" alt="Logo da Smart" class="cabecalho__logo"/>
+      </a>
+
+      <!--Barra de navegação nova-->
+      <nav class="cabecalho__navegacao">
+        <ul class="cabecalho__lista">
+
+          <!--Categoria Tinteiros-->
+          <li class="cabecalho__item-lista">
+            <a class="cabecalho__link" href="{% url 'loja' %}tinteiros">Tinteiros</a>
+
+            <div class="cabecalho__expansao-tipos">
+              <a class="cabecalho__imagem-link" href="{% url 'loja' %}tinteiros">
+                <img src="{% static 'images/menu_sec.png'%}" alt="Imagem do menu secundário" class="cabecalho__imagem"/>
+              </a>
+
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}tinteiros-hp">HP</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}tinteiros-epson">Epson</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}tinteiros-brother">Brother</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}tinteiros-canon">Canon</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!--Categoria Toners-->
+          <li class="cabecalho__item-lista">
+            <a class="cabecalho__link" href="{% url 'loja' %}toners">Toners</a>
+
+            <div class="cabecalho__expansao-tipos">
+              <a class="cabecalho__imagem-link" href="{% url 'loja' %}toners">
+                <img src="{% static 'images/menu_sec.png'%}" alt="Imagem do menu secundário" class="cabecalho__imagem"/>
+              </a>
+
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}toners-hp">HP</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}toners-epson">Epson</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}toners-brother">Brother</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}toners-canon">Canon</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!--Categoria Impressoras-->
+          <li class="cabecalho__item-lista">
+            <a class="cabecalho__link" href="{% url 'loja' %}impressoras">Impressoras</a>
+
+            <div class="cabecalho__expansao-tipos">
+              <a class="cabecalho__imagem-link" href="{% url 'loja' %}impressoras">
+                <img src="{% static 'images/menu_sec.png'%}" alt="Imagem do menu secundário" class="cabecalho__imagem"/>
+              </a>
+
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}impressoras-hp">HP</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}impressoras-epson">Epson</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}impressoras-brother">Brother</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}impressoras-canon">Canon</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!--Categoria Papelaria-->
+          <li class="cabecalho__item-lista">
+            <a class="cabecalho__link" href="{% url 'loja' %}papelaria">Papelaria</a>
+
+            <div class="cabecalho__expansao-tipos">
+              <a class="cabecalho__imagem-link" href="{% url 'loja' %}papelaria">
+                <img src="{% static 'images/menu_sec.png'%}" alt="Imagem do menu secundário" class="cabecalho__imagem"/>
+              </a>
+
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}papelaria-papeis">Papeis</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}papelaria-cadernos">Cadernos</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}papelaria-canetas">Canetas</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}papelaria-marcadores">Marcadores</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!--Categoria Gaming-->
+          <li class="cabecalho__item-lista">
+            <a class="cabecalho__link" href="{% url 'loja' %}gaming">Gaming</a>
+
+            <div class="cabecalho__expansao-tipos">
+              <a class="cabecalho__imagem-link" href="{% url 'loja' %}gaming">
+                <img src="{% static 'images/menu_sec.png'%}" alt="Imagem do menu secundário" class="cabecalho__imagem"/>
+              </a>
+
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-teclados">Teclados</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-ratos">Ratos</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-monitores">Monitores</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-computadores">Computadores</a></li>
+              </ul>
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-portateis">Portateis</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-cadeiras">Cadeiras</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-mesas">Mesas</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}gaming-acessorios">Acessórios</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <!--Categoria Ofertas-->
+          <li class="cabecalho__item-lista">
+            <a class="cabecalho__link" href="{% url 'loja' %}ofertas">Ofertas</a>
+
+            <div class="cabecalho__expansao-tipos">
+              <a class="cabecalho__imagem-link" href="{% url 'loja' %}ofertas">
+                <img src="{% static 'images/menu_sec.png'%}" alt="Imagem do menu secundário" class="cabecalho__imagem"/>
+              </a>
+
+              <ul class="cabecalho__lista cabecalho__lista--tipo">
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}ofertas-hp">HP</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}ofertas-epson">Epson</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}ofertas-brother">Brother</a></li>
+                <li><a class="cabecalho__link cabecalho__link--tipo" href="{% url 'loja' %}ofertas-canon">Canon</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="cabecalho__icones">
+      <div class="cabecalho__icone-login">
+        <!-- Para trocar o ícone basta adicionar a classe 'cabecalho__link-icone--logado' na âncora abaixo -->
+        {% if request.user.is_authenticated %} 
+        <a class="cabecalho__link-icone" href="javascript: void(0)">
+          <i class="bi bi-person-circle"></i>
+        {% else %}
+        <a class="cabecalho__link-icone" href="{% url 'fazer_login' %}">
+          <i class="bi bi-person"></i>
+        {% endif %}
+
+        
+          
+        </a>
+
+        <!-- Para exibir o menu do perfil, basta adicionar a classe 'cabecalho__informacoes-perfil--aberto' na div abaixo -->
+        <div class="cabecalho__informacoes-perfil">
+          <p class="cabecalho__texto">Olá, <span>{{ request.user.cliente.nome }}</span>!</p>
+          <a class="cabecalho__link cabecalho__link--perfil" href="{% url 'minha_conta' %}">Minha Conta</a>
+          <a class="cabecalho__link cabecalho__link--perfil" href="{% url 'meus_pedidos' %}">Meus Pedidos</a>
+          {% if equipe %}
+            <a class="cabecalho__link cabecalho__link--perfil" href="{% url 'gerenciar_loja' %}">Gerenciar Loja</a>
+          {% endif %}
+          <hr />
+          <a class="cabecalho__link cabecalho__link--perfil" href="{% url 'fazer_logout' %}">Sair</a>
+        </div>
+      </div>
+
+      <div class="cabecalho__icone-carrinho">
+        <a class="cabecalho__link-icone" href="{% url 'carrinho' %}">
+          <i class="bi bi-bag-check-fill"></i>
+        </a>
+        <div class="cabecalho__itens cabecalho__itens--visivel">{{ quantidade_produtos_carrinho }}</div>
+      </div>
+    </div>
+  </header>
